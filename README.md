@@ -1,5 +1,5 @@
 # Study-Oriented-Project-Homomorphic-Encryption
-Please note that this code is for educational purposes and lacks security considerations for real-world cryptographic applications.
+Please note that this code is for educational purposes and lacks security considerations for real-world cryptographic applications. Code_1.py and Code_2.py are for Black and White Images only and example images have been attached whereas Code_3.py is for all RGB images.
 
 # 1. Elgamal.py
     This document provides detailed documentation for the code implementation for Elgamal algorithm used for encryption. The code is designed to demonstrate a basic cryptographic scheme involving key generation, encryption, and decryption. It uses modular arithmetic to perform these operations.
@@ -118,6 +118,7 @@ Please note that this code is for educational purposes and lacks security consid
 
 
 # 4. Function uses for functions defined in functions.py
+    These are the various functions used in the other codes to perform specific operations.
     * def concatArr(arr, i, j, size):
     * def digits(num): returns number of digits
     * def zero_num(size,number): 
