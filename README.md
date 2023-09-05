@@ -93,7 +93,32 @@ Please note that this code is for educational purposes and lacks security consid
         The value of decrypted message is : 77
         The tasks took 2.0265579223632812e-05 seconds to execute
 
-# 3. Function uses for functions defined in functions.py
+# 3. code_1.py
+    
+
+    c. Output
+        The encryption tasks took 0.036595821380615234 seconds to execute
+        [[169 315 177 ... 239 103 226]
+        [346  86  23 ...  39 279 178]
+        [ 79 221 302 ... 337 183 216]
+        ...
+        [ 29 308  11 ...  51 174 260]
+        [160 316 315 ... 177 344 268]
+        [218  73 270 ...  19 327 292]]
+        The value of c1 is : 269 mod 349
+        The value of c2 is : 31 mod 349
+        The decryption tasks took 0.00875401496887207 seconds to execute
+        [[218 219 219 ... 209 212 213]
+        [218 218 218 ... 217 205 204]
+        [217 217 217 ... 206 217 220]
+        ...
+        [142 152 164 ... 115 118 119]
+        [151 153 176 ... 118 121 121]
+        [153 167 185 ... 123 124 121]]
+
+
+
+# 4. Function uses for functions defined in functions.py
     * def concatArr(arr, i, j, size):
     * def digits(num): returns number of digits
     * def zero_num(size,number): 
