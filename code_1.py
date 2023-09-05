@@ -66,7 +66,7 @@ if __name__ == "__main__":
     print(enc1)
 
     # Homomorphic multiplication
-    num = 1
+    num = 2
     Nmodc1 = pow(g, r, p)
     print("The value of c1 is :", Nmodc1, "mod", p)
     Nmodc2 = pow(num * pow(mody, r, p), 1, p)
