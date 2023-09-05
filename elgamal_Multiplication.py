@@ -25,12 +25,6 @@ if __name__ == "__main__":
     m2 = pow(modc2 * c3, 1, p)  # decrypted message
     print("The value of decrypted message is :", m2)
 
-    # p = 107
-    # g = 2
-    # x = 67
-    # m = 13
-    # r = 45
-
     p = 257
     g = 2585
     x = 47

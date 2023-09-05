@@ -1,4 +1,5 @@
 # Study-Oriented-Project-Homomorphic-Encryption
+Please note that this code is for educational purposes and lacks security considerations for real-world cryptographic applications.
 
 # 1. Elgamal.py
     This document provides detailed documentation for the code implementation for Elgamal algorithm used for encryption. The code is designed to demonstrate a basic cryptographic scheme involving key generation, encryption, and decryption. It uses modular arithmetic to perform these operations.
@@ -46,7 +47,53 @@
         The value of decrypted message is : 105
         The tasks took 1.0013580322265625e-05 seconds to execute
 
-# 2. Function uses for functions defined in functions.py
+# 2. elgamal_Multiplication.py
+    This has the added functionality of homomorphic multiplication to elgamal encryption.The code illustrates a basic cryptographic scheme involving key generation, encryption, decryption, and multiplication of encrypted values, all using modular arithmetic.  
+
+    The code is structured into several sections:
+
+    1. Key generation
+    2. First Encryption and Decryption
+    3. Second Encryption and Decryption
+    4. Multiplication of Encrypted Values
+    5. Decryption of the final value
+
+    **a. Variables**
+
+    p: A prime number 
+    g: A base value 
+    x: A secret exponent
+    message: The message to be encrypted.
+    m: integer representation of the message.
+    r: A random value
+    t1, t2: Time variables used for measuring execution time.
+    c1mult: The result of modc1 * modc11 (encrypted values multiplication).
+    c2mult: The result of modc2 * modc22 (encrypted values multiplication).
+
+   **b. General Instructions**
+        The values of p, g, x, and r can be changed as per user requirements.
+        The code demonstrates the ElGamal encryption process for two different messages, and the results are multiplied.
+
+    **c. Output**
+        The program starts 
+        The message is 11
+        The value of c1 is : 15 mod 257
+        The value of c2 is : 222 mod 257
+        The value of revModulo is: 242
+        The value of decrypted message is : 11
+        The message is 7
+        The value of c1 is : 15 mod 257
+        The value of c2 is : 188 mod 257
+        The value of revModulo is: 242
+        The value of decrypted message is : 7
+        The result of multiplication are:
+        The value of c1mult is : 225 mod 257
+        The value of c2mult is : 102 mod 257
+        The value of revModulo is: 225
+        The value of decrypted message is : 77
+        The tasks took 2.0265579223632812e-05 seconds to execute
+
+# 3. Function uses for functions defined in functions.py
     * def concatArr(arr, i, j, size):
     * def digits(num): returns number of digits
     * def zero_num(size,number): 
