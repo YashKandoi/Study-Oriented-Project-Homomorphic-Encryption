@@ -12,6 +12,7 @@ def concatArr(arr, i, j, size):
     str_con = ""
     for row in range(i, i+size):
         for column in range(j, j+size):
+            # checking whether 3-digit number or 2-digit number or 1-digit number and concatenating them with 0 in the beginning to make them 3-digit numbers
             if int(arr[row][column]/100) !=0:
                 num_str = str(arr[row][column])
             elif int(arr[row][column]/100) ==0 and int(arr[row][column]/10) !=0:
@@ -63,12 +64,12 @@ def convertListToMatrix(newRow,newColumn,size,list):
     matrices=[]
     for count in range(int(newRow*newColumn/(size*size))):
         enc_blockMatrix=[]
-        counter=0
         number=str(list[count])
         # print(number)
         while len(number)!=size*size*3:
             number='0'+number
         # print(number)
+        counter=0
         for row in range(size):
             a=[]
             for column in range(size):

@@ -5,7 +5,6 @@ from random import *
 if __name__ == "__main__":
     print("The program starts ")
     p = 257
-    # print("The length of p is:",len(str(p)))
     g = 2585
     x = 47
     message = '105'

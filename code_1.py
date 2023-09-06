@@ -48,7 +48,7 @@ if __name__ == "__main__":
             r = randint(1, p - 2)
             modc2 = pow(g, r, p)
             b1 = pow(int((n[row][column] + 1) * pow(mody, r, p)), 1, p)
-            enc[row][column] = pow(int((n[row][column] + 1) * pow(mody, r, p)), 1, p)
+            enc[row][column] = b1
             b.append(b1)
             a.append(modc2)
         modc11.append(a)
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     print(enc1)
 
     # Homomorphic multiplication
-    num = 2
+    num = 1
     Nmodc1 = pow(g, r, p)
     print("The value of c1 is :", Nmodc1, "mod", p)
     Nmodc2 = pow(num * pow(mody, r, p), 1, p)

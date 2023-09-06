@@ -320,3 +320,8 @@ rypted.npy', enc)
 - The decrypted image is saved as 'code2_image1_decrypted.npy' and 'code2_decrypted_image.png'.
 
 This code demonstrates the encryption and decryption of an image using the ElGamal encryption scheme and provides detailed comments to explain each step.
+
+# 6. code_3.py
+# Code Documentation: Image Encryption and Decryption with ElGamal
+
+This code is similar to code_2.py. The new feature here is that this has been implemented for RGB images and hence 3 matrix are used everywhere where one matrix was used in code_2.py.

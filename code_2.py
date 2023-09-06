@@ -12,9 +12,12 @@ import functions as fe
 
 if __name__ == "__main__":
 
-    n = cv2.imread("i8.jpeg", cv2.IMREAD_GRAYSCALE)
+    n = cv2.imread("i3.jpeg", cv2.IMREAD_GRAYSCALE)
     Row = len(n)
     Column = len(n[0])
+
+    print("The original matrix:")
+    print(n)
 
     matrix = []
     print("The program starts ")
@@ -44,9 +47,8 @@ if __name__ == "__main__":
         for column in range(0, Column):
             newMatrix[row][column] = n[row][column]
 
-    for row in range(0, newRow):
-        for column in range(0, newColumn):
-            if row >= Row or column >= Column:
+    for row in range(Row, newRow):
+        for column in range(Column, newColumn):
                 newMatrix[row][column] = rand.randint(0, 255)
 
 
@@ -57,6 +59,8 @@ if __name__ == "__main__":
             original_con = fe.concatArr(newMatrix, row, column, size)
             original_concat.append(original_con)
 
+    print("The original array concated form is:")
+    print(original_concat)
 # ---------------------------------------------------------------------------------
 # Key generation
     t1 = time.time()
@@ -88,22 +92,23 @@ if __name__ == "__main__":
     time_taken = t2 - t1
     print("The encryption tasks took", time_taken, "seconds to execute")
 
-    # print("The encrypted array concated form is:")
-    # print(enc_concat)
+    print("The encrypted array concated form is:")
+    print(enc_concat)
 
 
 # putting encrypted block to matrix form
     matrices = fe.convertListToMatrix(newRow, newColumn, size, enc_concat)
     # print(len(matrices))
     # print(matrices[0])
+        # initializing the 2d matrix with 0
     matrix_nxn = [[0 for _ in range(newColumn)] for _ in range(newRow)]
     # print("The size of matrix_nxn is ", len(matrix_nxn), "X", len(matrix_nxn[0]), " pixels")
     # print(matrix_nxn[0])
     # print(len(matrix_nxn[0]))
     # print(len(matrices))
     # print(matrices[0])
-    matrix_nxn = fe.convert_to_matrix(
-        matrices, size, len(matrix_nxn), len(matrix_nxn[0]))
+        # Append the mini matrices to the new matrix (matrix_nxn)
+    matrix_nxn = fe.convert_to_matrix(matrices, size, len(matrix_nxn), len(matrix_nxn[0]))
     # print(matrix_nxn)
     matrix_nxn = np.array(matrix_nxn)
     # print(matrix_nxn)
@@ -125,6 +130,9 @@ if __name__ == "__main__":
     encrypted_image = Image.fromarray(encrypted_matrix, "L")
     encrypted_image.save('code2_encrypted_image.png')
 
+    print("Encrypted matrix is:")
+    print(enc)
+
 # ---------------------------------------------------------------------------------
 # Decrypting the concatenated matrix
 
@@ -141,8 +149,8 @@ if __name__ == "__main__":
         dec_con = pow(value * c3, 1, p)-1
         dec_concat.append(dec_con)
 
-    # print("The decrypted array concated form is:")
-    # print(dec_concat)
+    print("The decrypted array concated form is:")
+    print(dec_concat)
 
 
 # ---------------------------------------------------------------------------------
