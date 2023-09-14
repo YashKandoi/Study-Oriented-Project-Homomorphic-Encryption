@@ -2,13 +2,15 @@ from paillier_implementation import PrivateKey, PublicKey, generate_keys, Encryp
 
 
 def main():
+    print("The program starts")
     # Generate Paillier key pair
     public_key, private_key = generate_keys(bitlen=128)
-
+    print("Keys Generated")
     # Encrypt some plaintext
-    plaintext1 = 42
+    plaintext1 = 218
     ciphertext1 = Encrypt(public_key, plaintext1)
 
+    print("CipherText 1 Generated")
     plaintext2 = 17
     ciphertext2 = Encrypt(public_key, plaintext2)
 
@@ -16,7 +18,15 @@ def main():
     result_add = homomorphic_add(public_key, ciphertext1, ciphertext2)
 
     # Perform homomorphic addition with a constant
-    constant = 5
+    # increase required in each pixel value
+    
+    # pixel_constant = "005"
+    # constant=""
+    # len_plaintext=int(len(str(plaintext1))/3)
+    # for i in range(0,len_plaintext):
+    #     constant+=pixel_constant
+    # constant=int(constant)
+    constant=5
     result_add_constant = homomorphic_add_constant(public_key, ciphertext1, constant)
 
     # Perform homomorphic multiplication with a constant
