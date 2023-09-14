@@ -124,6 +124,9 @@ Please note that this code is for educational purposes and lacks security consid
     * def zero_num(size,number): 
     * def convert_to_matrix(matrices,size,newRow,newColumn):
     * def convertListToMatrix(newRow,newColumn,size,list):
+    * def gcd(a, b):
+    * def lcm(a, b):
+    * def multiplicative_inverse(a, modulus):
 
 # 5. code_2.py
 # Code Documentation: Image Encryption and Decryption with ElGamal

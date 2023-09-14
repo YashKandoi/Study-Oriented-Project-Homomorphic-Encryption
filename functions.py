@@ -80,3 +80,30 @@ def convertListToMatrix(newRow,newColumn,size,list):
             enc_blockMatrix.append(a)
         matrices.append(enc_blockMatrix)
     return matrices
+
+# functions for paillier
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    """
+    lcm(a, b)
+
+    returns Lowest Common Multiple of a and b
+    """
+    return (a * b) // gcd(a, b)
+
+def multiplicative_inverse(a, modulus):
+    """
+    multiplicative_inverse(a, modulus)
+
+    returns x: multiplicative inverse of a
+    such that, a * x = 1 (mod modulus)
+    """
+    if math.gcd(a, modulus) != 1:
+        raise Exception('modular inverse does not exist')
+    else:
+        return pow(a, -1, modulus)
