@@ -7,7 +7,7 @@ def main():
     public_key, private_key = generate_keys(bitlen=128)
     print("Keys Generated")
     # Encrypt some plaintext
-    plaintext1 = 218
+    plaintext1 = 3130000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001183811000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     ciphertext1 = Encrypt(public_key, plaintext1)
 
     print("CipherText 1 Generated")
@@ -20,13 +20,13 @@ def main():
     # Perform homomorphic addition with a constant
     # increase required in each pixel value
     
-    # pixel_constant = "005"
-    # constant=""
-    # len_plaintext=int(len(str(plaintext1))/3)
-    # for i in range(0,len_plaintext):
-    #     constant+=pixel_constant
-    # constant=int(constant)
-    constant=5
+    pixel_constant = "005"
+    constant=""
+    len_plaintext=int(len(str(plaintext1))/3)
+    for i in range(0,len_plaintext):
+        constant+=pixel_constant
+    constant=int(constant)
+    # constant=5
     result_add_constant = homomorphic_add_constant(public_key, ciphertext1, constant)
 
     # Perform homomorphic multiplication with a constant
